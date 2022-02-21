@@ -1,5 +1,23 @@
+/* *, html, body {
+} */
+
+#root {
+	display: flex;
+	justify-content: space-around;
+	align-items: flex-start;
+}
+
 .App {
   text-align: center;
+	flex: 1;
+}
+
+.App:nth-child(2) {
+	background-color: #282c34;
+}
+
+.App:nth-child(1) {
+	background-color: #ffffff;
 }
 
 .App-logo {
@@ -14,7 +32,6 @@
 }
 
 .App-header {
-  background-color: #282c34;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -29,10 +46,13 @@
 }
 
 @keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  0% {
+    transform: rotate(-30deg);
   }
-  to {
-    transform: rotate(360deg);
+  50% {
+    transform: rotate(30deg);
   }
+	100% {
+    transform: rotate(-30deg);
+	}
 }
