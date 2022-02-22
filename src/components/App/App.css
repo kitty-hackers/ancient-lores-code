@@ -27,7 +27,7 @@
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+    animation: App-logo-spin infinite 10s ease-in-out;
   }
 }
 
@@ -47,12 +47,12 @@
 
 @keyframes App-logo-spin {
   0% {
-    transform: rotate(-30deg);
+    transform: rotate(-5deg);
   }
   50% {
-    transform: rotate(30deg);
+    transform: rotate(5deg);
   }
 	100% {
-    transform: rotate(-30deg);
+    transform: rotate(-5deg);
 	}
 }
