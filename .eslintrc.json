@@ -4,7 +4,10 @@
         "es2021": true
     },
     "extends": [
-        "plugin:react/recommended"
+        "plugin:react/recommended",
+        "plugin:react/jsx-runtime",
+				"prettier",
+        "plugin:prettier/recommended"
     ],
     "parser": "@typescript-eslint/parser",
     "parserOptions": {
@@ -16,9 +19,16 @@
     },
     "plugins": [
         "react",
-        "@typescript-eslint"
+        "@typescript-eslint",
+				"prettier"
     ],
     "rules": {
-			"no-var": "error"
-    }
+			"no-var": "error",
+			"react/prop-types": 0
+    },
+		"settings": {
+			"react": {
+				"version": "detect"
+			}
+		}
 }
