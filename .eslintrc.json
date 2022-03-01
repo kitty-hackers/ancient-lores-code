@@ -70,7 +70,7 @@
 		"jsx-filename-extensions": [ 0, {
 			"extensions": [ ".js", ".jsx", ".ts", ".tsx" ]
 		} ],
-		"react/jsx-props-no-spreading": "error",
+		"react/jsx-props-no-spreading": 0,
 		"react/jsx-sort-props": [ "error", {
 			"noSortAlphabetically": false
 		} ],
@@ -84,14 +84,6 @@
 	"settings": {
 		"react": {
 			"version": "detect"
-		}//,
-		// "import/resolver": {
-		// 	"alias": {
-		// 		"extensions": [ ".js", ".jsx", ".ts", ".tsx" ],
-		// 		"map": [
-		// 			[ "@", "./src" ]
-		// 		]
-		// 	}
-		// }
+		}
 	}
 }

@@ -1,4 +1,5 @@
 import { VFC } from "react";
+import "./Link.css";
 
 type TProps = {
 	caption: string;
@@ -10,7 +11,7 @@ export const Link: VFC<TProps> = (props) => {
 	const { caption, to } = props;
 
 	return (
-		<a className="App-link" href={to} rel="noopener noreferrer" target="_blank">
+		<a className="app-link" href={to} rel="noopener noreferrer" target="_blank">
 			{caption}
 		</a>
 	);
