@@ -23,6 +23,7 @@
 		"sourceMap": true,
 		"noUnusedLocals": true,
 		"noUnusedParameters": true,
+		"types": ["less"]
   },
-  "include": [ "src/**/*" ]
+  "include": [ "src/**/*", "externals.d.ts" ]
 }

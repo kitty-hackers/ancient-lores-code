@@ -1,0 +1,36 @@
+@brand-ancient-lores-color: #ffa800;
+@brand-twitch-color: #9146ff;
+@brand-youtube-color-1: #f00;
+@brand-youtube-color-2: #212121;
+
+@screen-tablet: ~"(max-width: 750px)";
+
+.link {
+	border-radius: 5px;
+  color: #fff;
+	min-width: 27vw;
+	padding: 2em;
+	text-decoration: none;
+	box-shadow: 0 0.5em 1em -0.5em #000, inset 0 0.9em 0.5em -1em #fff;
+	
+	@media @screen-tablet {
+		color: transparent;
+		box-shadow: none;
+	}
+
+	&--twitch {
+		background: @brand-twitch-color;
+
+		@media @screen-tablet {
+			background: url('/public/logos/TwitchGlitchPurple.png') center/contain no-repeat;
+		}
+	}
+	
+	&--youtube {
+		background: @brand-youtube-color-1;
+
+		@media @screen-tablet {
+			background: url('/public/logos/yt_icon_rgb.png') center/contain no-repeat;
+		}
+	}
+}

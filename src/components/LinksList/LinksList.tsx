@@ -1,7 +1,7 @@
-import { VFC } from "react";
+import React, { VFC } from "react";
 import classnames from "classnames/bind";
 import { Link } from "../Link";
-import styles from "./LinksList.less";
+import styles from "./LinksList.module.less";
 
 type TListEntry = { caption: string; key: string; to: string };
 
@@ -20,11 +20,11 @@ export const LinksList: VFC<TProps> = (props) => {
 			{data.map((item) => {
 				const { key, ...linkProps } = item;
 
-				const classNames = cx([`${className}__item`, `${className}__item--${key.toLowerCase()}`]);
+				const classNames = cx(`${className}__item`);
 
 				return (
 					<li className={classNames} key={key}>
-						<Link {...linkProps} />
+						<Link type={key} {...linkProps} />
 					</li>
 				);
 			})}

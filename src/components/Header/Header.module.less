@@ -1,0 +1,35 @@
+@class: header;
+@spinner-logo: app-logo-spin;
+
+.@{class} {
+  align-items: center;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  font-size: calc(10px + 2vmin);
+  justify-content: center;
+  height: calc(40vh - 2em);
+	padding: 1em 0;
+
+	&-logo {
+		height: calc(40vh - 2em);
+		pointer-events: none;
+
+		@media (prefers-reduced-motion: no-preference) {
+			animation: @spinner-logo infinite 10s ease-in-out;
+		}
+	}
+}
+
+
+@keyframes @spinner-logo {
+	0% {
+		transform: rotate(-15deg);
+	}
+	50% {
+		transform: rotate(5deg);
+	}
+	100% {
+		transform: rotate(-15deg);
+	}
+}

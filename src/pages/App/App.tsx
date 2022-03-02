@@ -1,27 +1,18 @@
-import { VFC } from "react";
+import React, { VFC } from "react";
+import classNames from "classnames/bind";
 import { Header } from "../../components/Header";
-import { LinksList } from "../../components/LinksList";
-import "./App.css";
+import { StreamBar } from "../../components/StreamBar";
+import styles from "./App.module.less";
 
-const listData = [
-	{
-		caption: "YouTube - Ancient Lores",
-		key: "YouTube",
-		to: "//youtube.ancientlores.com",
-	},
-	{
-		caption: "Twitch - Ancient Lores",
-		key: "Twitch",
-		to: "//twitch.ancientlores.com",
-	},
-];
+const cx = classNames.bind(styles);
+const className = 'app';
 
 export const App: VFC = () => (
-	<div className="app">
+	<div className={cx(className)}>
 		<Header />
 
-		<section className="app-content" data-testid="appTestId">
-			<LinksList data={listData} />
+		<section className={cx(`${className}-content`)} data-testid="appTestId">
+			<StreamBar />
 		</section>
 	</div>
 );
