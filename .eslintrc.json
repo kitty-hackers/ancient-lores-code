@@ -7,6 +7,7 @@
 	},
 	"extends": [
 		"react-app",
+		"react-app/jest",
 		// "airbnb",
 		"plugin:prettier/recommended",
 		"prettier",
