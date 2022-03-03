@@ -8,7 +8,6 @@
 	"extends": [
 		"react-app",
 		"react-app/jest",
-		// "airbnb",
 		"plugin:prettier/recommended",
 		"prettier",
 		"plugin:@typescript-eslint/recommended",
@@ -68,6 +67,7 @@
 		"prettier/prettier": "error",
 		"react/prop-types": 0,
 		"react/destructuring-addigment": 0,
+		"react/jsx-uses-react": "error",
 		"jsx-filename-extensions": [ 0, {
 			"extensions": [ ".js", ".jsx", ".ts", ".tsx" ]
 		} ],
