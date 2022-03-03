@@ -10,7 +10,7 @@ type TProps = {
 };
 
 const cx = classnames.bind(styles);
-const className = 'links-list';
+const className = "links-list";
 
 export const LinksList: VFC<TProps> = (props) => {
 	const { data } = props;

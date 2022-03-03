@@ -1,5 +1,5 @@
-declare module '*.module.less' {
-  const resource: {[key: string]: string};
+declare module "*.module.less" {
+	const resource: { [key: string]: string };
 
 	export = resource;
 }

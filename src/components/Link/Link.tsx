@@ -15,7 +15,10 @@ const className = "link";
 export const Link: VFC<TProps> = (props) => {
 	const { caption, type, to } = props;
 
-	const classnames = cx({ [className]: true, [`${className}--${type?.toLowerCase()}`]: type ?? false });
+	const classnames = cx({
+		[className]: true,
+		[`${className}--${type?.toLowerCase()}`]: type ?? false,
+	});
 
 	return (
 		<a className={classnames} href={to} rel="noopener noreferrer" target="_blank">

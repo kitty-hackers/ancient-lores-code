@@ -4,18 +4,29 @@
 @brand-youtube-color-2: #212121;
 
 @screen-tablet: ~"(max-width: 750px)";
+@screen-phone: ~"(max-width: 300px)";
 
 .link {
 	border-radius: 5px;
-  color: #fff;
+	color: #fff;
+	font-size: 1.5em;
+	font-weight: bold;
 	min-width: 27vw;
 	padding: 2em;
 	text-decoration: none;
-	box-shadow: 0 0.5em 1em -0.5em #000, inset 0 0.9em 0.5em -1em #fff;
+	box-shadow:
+		0 0.5em 1em -0.5em #000,
+		inset 0 0.9em 0.5em -1em #fff,
+		inset 0 -0.9em 0.5em -1em #000;
 	
 	@media @screen-tablet {
 		color: transparent;
 		box-shadow: none;
+		padding: 1em;
+	}
+
+	@media @screen-phone {
+		padding: 0;
 	}
 
 	&--twitch {

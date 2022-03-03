@@ -5,7 +5,8 @@
   "scripts": {
     "start": "webpack serve --mode development",
     "lint": "eslint . --ext .ts,.tsx",
-    "test": "jest"
+    "test": "jest",
+		"build": "webpack"
   },
   "devDependencies": {
     "@babel/cli": "^7.17.6",

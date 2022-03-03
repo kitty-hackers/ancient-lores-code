@@ -5,7 +5,7 @@ import { StreamBar } from "../../components/StreamBar";
 import styles from "./App.module.less";
 
 const cx = classNames.bind(styles);
-const className = 'app';
+const className = "app";
 
 export const App: VFC = () => (
 	<div className={cx(className)}>
