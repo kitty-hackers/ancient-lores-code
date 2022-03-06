@@ -25,7 +25,7 @@ FROM nginx:1.21-alpine
 
 LABEL maintainer="Paul Petrov (paul@bargamut.ru)"
 
-COPY ./config/nginx-custom.conf /etc/nginx/conf.d/default.conf
+COPY ./configs/nginx-custom.conf /etc/nginx/conf.d/default.conf
 
 RUN rm -rf /usr/share/nginx/html/*
 
