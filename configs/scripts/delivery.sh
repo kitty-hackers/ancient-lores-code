@@ -1,6 +1,6 @@
 #!/bin/bash
 
-CONTAINER_OPTIONS='-d -p 3000:80' # $1
+CONTAINER_OPTIONS='-d -p 3001:80' # $1
 CONTAINER_NAME='ancient-lores-site' # $2
 IMAGE_NAME='ancient-lores/ancient-lores-site:latest' # $3
 
