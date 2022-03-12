@@ -30,10 +30,10 @@ pipeline:
       stages:
         - stage: Build Docker container
           steps:
-            - sh 'scripts/build-container.sh'
+            - sh 'configs/scripts/build-container.sh'
         - stage: Delivery
           steps:
-            - sh 'scripts/delivery.sh'
+            - sh 'configs/scripts/delivery.sh'
         - stage: Clean Docker images
           steps:
-            - sh 'scripts/clean-images.sh'
+            - sh 'configs/scripts/clean-images.sh'
