@@ -30,6 +30,8 @@ pipeline:
       stages:
         - stage: Build Docker container
           steps:
+						- sh 'whoami'
+						- sh 'ls -lpha configs/scripts/'
             - sh 'configs/scripts/build-container.sh'
         - stage: Delivery
           steps:
