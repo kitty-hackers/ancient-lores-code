@@ -2,7 +2,7 @@
 # See more: https://plugins.jenkins.io/pipeline-as-yaml/
 pipeline:
   agent:
-    label: 'main'
+    label: 'master'
   tools:
     nodejs: NodeJS 17.5.0
   stages:
