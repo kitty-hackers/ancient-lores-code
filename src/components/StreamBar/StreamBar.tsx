@@ -1,26 +1,32 @@
 import React, { VFC } from "react";
 import classNames from "classnames/bind";
-import { LinksList } from "../../components/LinksList";
-import styles from "./StreamBar.module.less";
+import { LinksList, TListEntry } from "../LinksList";
+import { Link } from "../Link";
+import { streamsLinksList } from "./constants/streamsLinksList";
+import streamBarStyles from "./styles/StreamBar.module.less";
+import streamLinkStyles from "./styles/StreamLink.module.less";
 
-const cx = classNames.bind(styles);
-const className = "stream-bar";
+const cx = classNames.bind({
+	...streamBarStyles,
+	...streamLinkStyles,
+});
 
-const listData = [
-	{
-		caption: "Смотреть на YouTube",
-		key: "YouTube",
-		to: "//youtube.ancientlores.com",
-	},
-	{
-		caption: "Смотреть на Twitch",
-		key: "Twitch",
-		to: "//twitch.ancientlores.com",
-	},
-];
+const STREAM_BAR_CLASSNAME = "stream-bar";
+const STREAM_LINK_CLASSNAME = "stream-link";
 
-export const StreamBar: VFC = () => (
-	<div className={cx(className)}>
-		<LinksList data={listData} />
-	</div>
-);
+export const StreamBar: VFC = () => {
+	const itemRender = (item: TListEntry) => {
+		const classNames = {
+			[STREAM_LINK_CLASSNAME]: true,
+			[`${STREAM_LINK_CLASSNAME}--${item.key?.toLowerCase()}`]: item.key ?? false,
+		};
+
+		return <Link className={cx(classNames)} {...item} />;
+	};
+
+	return (
+		<div className={cx(STREAM_BAR_CLASSNAME)}>
+			<LinksList data={streamsLinksList} itemRender={itemRender} />
+		</div>
+	);
+};

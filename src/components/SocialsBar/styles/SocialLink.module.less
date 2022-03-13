@@ -1,0 +1,23 @@
+@import '/src/variables.module.less';
+
+@class: social-link;
+
+.@{class} {
+	color: transparent;
+	box-shadow: none;
+	min-height: 5vh;
+	min-width: 5vh;
+	padding: 0;
+
+	&--vkontakte {
+		background: @brand-vkontakte-color;
+
+		background: url('/src/assets/logos/socials/VK_logo_Blue_40x40.svg') center/contain no-repeat;
+	}
+	
+	&--telegram {
+		background: @brand-telegram-color;
+
+		background: url('/src/assets/logos/socials/Logo.svg') center/contain no-repeat;
+	}
+}

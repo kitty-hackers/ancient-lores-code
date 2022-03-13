@@ -1,5 +1,6 @@
 import React, { VFC } from "react";
 import classNames from "classnames/bind";
+import { SocialsBar } from "../../components/SocialsBar";
 import { Header } from "../../components/Header";
 import { StreamBar } from "../../components/StreamBar";
 import styles from "./App.module.less";
@@ -16,10 +17,7 @@ export const App: VFC = () => (
 		</section>
 
 		<footer className={cx(`${className}-footer`)}>
-			<ul>
-				<li>Telegram</li>
-				<li>VK.com</li>
-			</ul>
+			<SocialsBar />
 		</footer>
 	</div>
 );
