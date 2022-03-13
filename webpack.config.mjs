@@ -36,14 +36,15 @@ const config = {
 	},
 
 	devtool: "eval-source-map",
-	entry: path.resolve(__dirname, "src", "index.tsx"),
-	mode: process.env.mode ?? "development",
+	entry: "./src/index.tsx",
+	mode: process.env.mode ?? "production",
 
 	module: {
 		rules: [{ ...babelLoader }, { ...lessLoader }, ...assetLoader],
 	},
 
 	output: {
+		assetModuleFilename: "assets/images/[hash][ext][query]",
 		clean: true,
 		filename: "bundle.js",
 	},
@@ -54,25 +55,16 @@ const config = {
 		new CopyWebpackPlugin({
 			patterns: [
 				{
-					from: path.resolve(__dirname, "src", "assets"),
+					from: path.resolve(__dirname, "public"),
 					globOptions: {
-						ignore: ["**/logos/**"],
+						ignore: ["**/index.html"],
 					},
 				},
 			],
 		}),
 
 		new HtmlWebpackPlugin({
-			meta: {
-				description:
-					"Сайт Ancient Lores | Сказания древности - ресурс о настольных ролевых играх: D&D, Pathfinder, GURPS",
-				"msapplication-TileColor": "#ffffff",
-				"msapplication-TileImage": "/favicon/ms-icon-144x144.png",
-				"theme-color": "#ffffff",
-				viewport: "width=device-width, initial-scale=1",
-			},
 			template: "public/index.html",
-			title: "Ancient Lores | Сказания древности",
 		}),
 	],
 

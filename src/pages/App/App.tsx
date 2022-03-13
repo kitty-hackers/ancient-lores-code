@@ -14,5 +14,12 @@ export const App: VFC = () => (
 		<section className={cx(`${className}-content`)} data-testid="appTestId">
 			<StreamBar />
 		</section>
+
+		<footer className={cx(`${className}-footer`)}>
+			<ul>
+				<li>Telegram</li>
+				<li>VK.com</li>
+			</ul>
+		</footer>
 	</div>
 );
