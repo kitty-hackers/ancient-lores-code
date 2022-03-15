@@ -1,8 +1,7 @@
 import React, { VFC } from "react";
 import classNames from "classnames/bind";
-import { SocialsBar } from "../../components/SocialsBar";
 import { Header } from "../../components/Header";
-import { StreamBar } from "../../components/StreamBar";
+import { Content, Footer } from "./components";
 import styles from "./App.module.less";
 
 const cx = classNames.bind(styles);
@@ -12,12 +11,8 @@ export const App: VFC = () => (
 	<div className={cx(className)}>
 		<Header />
 
-		<section className={cx(`${className}-content`)} data-testid="appTestId">
-			<StreamBar />
-		</section>
+		<Content />
 
-		<footer className={cx(`${className}-footer`)}>
-			<SocialsBar />
-		</footer>
+		<Footer />
 	</div>
 );
