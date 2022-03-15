@@ -11,8 +11,8 @@ export const Header: VFC = () => (
 	<header className={cx(className)}>
 		<div className={cx(`${className}-logo`)}>
 			<picture>
-				<source media="(max-width: 750px)" srcSet={squareLogoBordered} />
-				<source media="(min-width: 751px)" srcSet={fullLogo} />
+				<source media="(max-width: 650px)" srcSet={squareLogoBordered} />
+				<source media="(min-width: 651px)" srcSet={fullLogo} />
 
 				<img alt="logo" className={cx(`${className}-logo-image`)} src={fullLogo} />
 			</picture>
