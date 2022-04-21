@@ -8,7 +8,7 @@ const cx = classNames.bind(styles);
 const className = "app";
 
 export const App: VFC = () => (
-	<div className={cx(className)}>
+	<div className={cx(className)} data-testid="appTestId">
 		<Header />
 
 		<Content />
