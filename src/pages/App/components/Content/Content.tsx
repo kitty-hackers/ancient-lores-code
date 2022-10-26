@@ -7,7 +7,11 @@ const cx = classNames.bind(styles);
 const className = "content";
 
 export const Content: VFC = () => (
-	<section className={cx(className)} data-testid="appTestId">
-		<StreamBar />
+	<section className={cx(className)}>
+		<div className={cx(`${className}__lead`)}>Игры</div>
+
+		<div className={cx(`${className}__watchbar`)}>
+			<StreamBar />
+		</div>
 	</section>
 );
